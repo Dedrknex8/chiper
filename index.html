@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encryption/Decryption Tool</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Encryption and Decryption Tool</h1>
+
+        <!-- Caesar Cipher Section -->
+        <h2>Caesar Cipher</h2>
+        <label for="caesar-text">Text:</label>
+        <input type="text" id="caesar-text" placeholder="Enter text">
+        <label for="caesar-shift">Shift Value:</label>
+        <input type="number" id="caesar-shift" placeholder="Enter shift value">
+        <button onclick="caesarEncrypt()">Encrypt</button>
+        <button onclick="caesarDecrypt()">Decrypt</button>
+        <p>Result: <span id="caesar-result"></span></p>
+
+        <!-- Vigenère Cipher Section -->
+        <h2>Vigenère Cipher</h2>
+        <label for="vigenere-text">Text:</label>
+        <input type="text" id="vigenere-text" placeholder="Enter text">
+        <label for="vigenere-key">Key:</label>
+        <input type="text" id="vigenere-key" placeholder="Enter key">
+        <button onclick="vigenereEncrypt()">Encrypt</button>
+        <button onclick="vigenereDecrypt()">Decrypt</button>
+        <p>Result: <span id="vigenere-result"></span></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

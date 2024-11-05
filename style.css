@@ -1,0 +1,139 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+    
+    background-size: 40px 40px;
+    background-image: linear-gradient(to right, #eef2ff 1px,transparent 1px
+    ), linear-gradient(to bottom, #eef2ff 1px,transparent 1px);
+    
+}
+
+body {
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #333;
+}
+
+/* Main container styling */
+.container {
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 30px;
+    max-width: 600px;
+    width: 100%;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Fade-in animation for the container */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Headings */
+h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #2c3e50;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    color: #16a085;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Labels */
+label {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 5px;
+    text-align: left;
+    color: #34495e;
+}
+
+/* Input styling with scale animation */
+input[type="text"], input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 2px solid #bdc3c7;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+input[type="text"]:focus, input[type="number"]:focus {
+    border-color: #3498db;
+    outline: none;
+    transform: scale(1.05);
+}
+
+/* Button styling with hover and scale animation */
+button {
+    padding: 10px 15px;
+    margin: 10px 5px;
+    font-size: 1rem;
+    color: white;
+    background-color: #3498db;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #2980b9;
+    transform: scale(1.1);
+}
+
+/* Result display with fade-in effect */
+p {
+    font-size: 1.2rem;
+    margin-top: 20px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+#caesar-result, #vigenere-result {
+    font-weight: bold;
+    color: #27ae60;
+}
+
+/* Fade-in animation for result */
+@keyframes resultFadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+#caesar-result, #vigenere-result {
+    animation: resultFadeIn 0.8s ease-in-out;
+}
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+    }
+
+    button {
+        width: 100%;
+    }
+}
